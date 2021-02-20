@@ -21,6 +21,7 @@
           Video_0.pause();
 
           marker.addEventListener("markerFound", function (evt) {
+			console.log("marker found");
             markerFound = 1;
             button.hidden = false;
             // Video_0.play();  // if you want the video 
@@ -28,6 +29,7 @@
           });
 
           marker.addEventListener("markerLost", function (evt) {
+			console.log("marker lost");
             markerFound = 0;
             Video_0.pause();
             button.hidden = true;

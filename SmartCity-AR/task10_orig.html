@@ -15,7 +15,7 @@
           var elem = document.documentElement;
           var markerHiro = document.querySelector("#markerHiro");
           var fullbutton = document.querySelector("#fullscreen");
-          var Video_0 = document.querySelector("#avocado_video");
+          var Video_0 = document.querySelector("#Video_0");
           var buttonHiro = document.querySelector("#mutebuttonHiro");
           buttonHiro.hidden = true;
           Video_0.pause();
@@ -99,11 +99,18 @@
   <a-scene embedded arjs="debugUIEnabled: false; sourceType: webcam" vr-mode-ui="enabled: false">
     <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
     <a-assets>
-      <video id="avocado_video" autoplay="false" loop crossorigin="anonymous" src="assets/avocado0.mp4" webkit-playsinline playsinline controls muted></video>
+      <video id="avocado_video0" autoplay="false" loop crossorigin="anonymous" src="assets/avocado0.mp4" webkit-playsinline playsinline controls muted></video>
+	  <video id="avocado_video1" autoplay="false" loop crossorigin="anonymous" src="assets/avocado1.mp4" webkit-playsinline playsinline controls muted></video>
     </a-assets>
+	
     <a-marker id="markerHiro" preset="hiro" emitevents="true" button>
-      <a-video src="#avocado_video" id="Video_0" class="intersectable" width="16" height="9" position="0 1 0" scale="0.2 0.2 0.2" rotation="0 0 0" color="#FFFFFF" transparent=False></a-video>
+      <a-video src="#avocado_video0" id="Video_0" class="intersectable" width="16" height="9" position="0 1 0" scale="0.2 0.2 0.2" rotation="0 0 0" color="#FFFFFF" transparent=False></a-video>
     </a-marker>
+	
+	<a-marker id="markerKanji" preset="kanji" emitevents="true" button>
+      <a-video src="#avocado_video1" id="Video_1" class="intersectable" width="16" height="9" position="0 1 0" scale="0.2 0.2 0.2" rotation="0 0 0" color="#FFFFFF" transparent=False></a-video>
+    </a-marker>
+	
     <a-entity camera></a-entity>
   </a-scene>
 </body>

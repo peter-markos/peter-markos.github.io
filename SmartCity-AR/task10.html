@@ -16,8 +16,8 @@
           var markerHiro = document.querySelector("#markerHiro");
 		  var markerKanji = document.querySelector("#markerKanji");
           var fullbutton = document.querySelector("#fullscreen");
-          var Video_0 = document.querySelector("#avocado_video0");
-		  var Video_1 = document.querySelector("#avocado_video1");
+          var Video_0 = document.querySelector("#Video_0");
+		  var Video_1 = document.querySelector("#Video_1");
           var buttonHiro = document.querySelector("#mutebuttonHiro");
 		  var buttonKanji = document.querySelector("#mutebuttonKanji");
           buttonHiro.hidden = true;
@@ -53,7 +53,7 @@
 
           // button for video play/pause
           buttonHiro.addEventListener("click", function(evt){
-            console.log("button clicked")
+            console.log("button clicked Hiro")
             if(Video_0.muted==true){
               buttonHiro.innerHTML="Pause Hiro";
               Video_0.muted=false;
@@ -66,7 +66,7 @@
           });
 		  
 		  buttonKanji.addEventListener("click", function(evt){
-            console.log("button clicked")
+            console.log("button clicked Kanji")
             if(Video_1.muted==true){
               buttonKanji.innerHTML="Pause Kanji";
               Video_1.muted=false;

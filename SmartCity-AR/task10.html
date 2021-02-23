@@ -24,29 +24,35 @@
 		  buttonKanji.hidden = true;
           Video_0.pause();
 		  Video_1.pause();
+		  Video_0.muted = true;
+		  Video_1.muted = true;
 
           markerHiro.addEventListener("markerFound", function (evt) {
             markerFound = 1;
             buttonHiro.hidden = false;
-            // Video_0.play();  // if you want the video 
+			Video_0.muted = false;
+            Video_0.play();  // if you want the video 
             // to start immediently on marker detection, uncomment this
           });
 		  
 		  markerKanji.addEventListener("markerFound", function (evt) {
             markerFound = 1;
             buttonKanji.hidden = false;
-            // Video_0.play();  // if you want the video 
+			Video_1.muted = false;
+            Video_1.play();  // if you want the video 
             // to start immediently on marker detection, uncomment this
           });
 
           markerHiro.addEventListener("markerLost", function (evt) {
             markerFound = 0;
+			Video_0.muted = true;
             Video_0.pause();
             buttonHiro.hidden = true;
           });
 		  
 		  markerKanji.addEventListener("markerLost", function (evt) {
             markerFound = 0;
+			Video_1.muted = true;
             Video_1.pause();
             buttonKanji.hidden = true;
           });
